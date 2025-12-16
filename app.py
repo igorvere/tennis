@@ -6,6 +6,8 @@ from shots import SHOT_PRESETS, preset_options
 
 from physics import simulate
 
+import time
+
 neon_net = "#00eaff"
 neon_lines = "#b25cd1"
 
@@ -245,6 +247,8 @@ app.layout = html.Div(
                 html.H3("Shot Metrics"),
                 html.Div(id="metric-net-clearance", style={"marginTop": "10px", "fontSize": "18px"}),
                 html.Div(id="metric-landing-depth", style={"marginTop": "5px", "fontSize": "18px"}),
+                html.Div(id="metric-compute", style={"marginTop": "15px", "fontSize": "18px"}),
+
             ]
         )
     ]
@@ -257,6 +261,7 @@ app.layout = html.Div(
     Output("prev-shot", "data"),
     Output("metric-net-clearance", "children"),
     Output("metric-landing-depth", "children"),
+    Output("metric-compute", "children"),
     Input("speed", "value"),
     Input("height", "value"),
     Input("elevation", "value"),
@@ -276,6 +281,8 @@ def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_
     if relayout and "scene.camera" in relayout:
         camera = relayout["scene.camera"]
     
+    time0 = time.time()
+
     cc = 1000/3600 
     traj = simulate(height/100, speed * cc, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y)
     X, Y, Z = traj[:,0], traj[:,1], traj[:,2]
@@ -310,8 +317,9 @@ def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_
         landing_text = "Landing depth: (no landing detected)"
 
     clear_text = f"Net clearance: {net_clear_cm*100:.1f} cm"
+    compute_took_txt = f"Compute took: {time.time() - time0:.2f} sec"
 
-    return fig, new_prev, clear_text, landing_text
+    return fig, new_prev, clear_text, landing_text, compute_took_txt
 
 @app.callback(
     Output("speed", "value"),
