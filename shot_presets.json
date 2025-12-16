@@ -1,0 +1,242 @@
+{
+    "players": {
+      "Nick Kyrgios": {
+        "serve": {
+          "first": {"speed_kmh":210,"spin_rpm":2200,"spin_tilt_deg":80,"spin_axis_azim_deg":60,"launch_height_m":3.15,"launch_angle_deg":-4.5,"azimuth_deg":2,"baseline_shift_m":0.8,"depth_m":-0.1},
+          "second": {"speed_kmh":165,"spin_rpm":3200,"spin_tilt_deg":35,"spin_axis_azim_deg":180,"launch_height_m":3.15,"launch_angle_deg":-1.0,"azimuth_deg":7,"baseline_shift_m":0.8,"depth_m":-0.1}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":125,"spin_rpm":2800,"spin_tilt_deg":20,"spin_axis_azim_deg":10,"launch_angle_deg":8,"azimuth_deg":6,"launch_height_m":1.0,"baseline_shift_m":2.0,"depth_m":1.2},
+          "backhand": {"speed_kmh":110,"spin_rpm":1800,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":7,"azimuth_deg":-6,"launch_height_m":1.0,"baseline_shift_m":-1.5,"depth_m":1.0},
+          "slice": {"speed_kmh":90,"spin_rpm":2500,"spin_tilt_deg":120,"spin_axis_azim_deg":-40,"launch_angle_deg":4,"azimuth_deg":-6,"launch_height_m":1.05,"baseline_shift_m":-1.5,"depth_m":1.4},
+          "drop_shot": {"speed_kmh":30,"spin_rpm":1800,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":25,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.5,"depth_m":0.5}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":55,"spin_rpm":800,"spin_tilt_deg":20,"spin_axis_azim_deg":15,"launch_angle_deg":5,"azimuth_deg":5,"launch_height_m":1.2,"baseline_shift_m":1.0,"depth_m":-6.0},
+          "backhand_volley": {"speed_kmh":50,"spin_rpm":900,"spin_tilt_deg":10,"spin_axis_azim_deg":-15,"launch_angle_deg":6,"azimuth_deg":-5,"launch_height_m":1.1,"baseline_shift_m":-1.0,"depth_m":-6.0}
+        }
+      },
+  
+      "Novak Djokovic": {
+        "serve": {
+          "first": {"speed_kmh":185,"spin_rpm":2800,"spin_tilt_deg":50,"spin_axis_azim_deg":25,"launch_height_m":3.0,"launch_angle_deg":-3.5,"azimuth_deg":2,"baseline_shift_m":0.6,"depth_m":-0.2},
+          "second": {"speed_kmh":155,"spin_rpm":4300,"spin_tilt_deg":20,"spin_axis_azim_deg":185,"launch_height_m":3.0,"launch_angle_deg":1.5,"azimuth_deg":8,"baseline_shift_m":0.6,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":120,"spin_rpm":3300,"spin_tilt_deg":15,"spin_axis_azim_deg":15,"launch_angle_deg":10,"azimuth_deg":7,"launch_height_m":1.05,"baseline_shift_m":1.8,"depth_m":1.3},
+          "backhand": {"speed_kmh":115,"spin_rpm":2600,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":9,"azimuth_deg":-7,"launch_height_m":1.05,"baseline_shift_m":-1.8,"depth_m":1.3},
+          "slice": {"speed_kmh":85,"spin_rpm":3000,"spin_tilt_deg":110,"spin_axis_azim_deg":-50,"launch_angle_deg":3,"azimuth_deg":-7,"launch_height_m":1.0,"baseline_shift_m":-1.8,"depth_m":1.6},
+          "drop_shot": {"speed_kmh":32,"spin_rpm":2000,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":28,"azimuth_deg":0,"launch_height_m":0.95,"baseline_shift_m":0.3,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":50,"spin_rpm":700,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":4,"launch_height_m":1.2,"baseline_shift_m":0.8,"depth_m":-6.2},
+          "backhand_volley": {"speed_kmh":48,"spin_rpm":900,"spin_tilt_deg":5,"spin_axis_azim_deg":-10,"launch_angle_deg":5,"azimuth_deg":-4,"launch_height_m":1.15,"baseline_shift_m":-0.8,"depth_m":-6.2}
+        }
+      },
+  
+      "Rafael Nadal": {
+        "serve": {
+          "first": {"speed_kmh":175,"spin_rpm":3400,"spin_tilt_deg":40,"spin_axis_azim_deg":-40,"launch_height_m":3.05,"launch_angle_deg":-2.0,"azimuth_deg":4,"baseline_shift_m":1.2,"depth_m":-0.3},
+          "second": {"speed_kmh":150,"spin_rpm":4800,"spin_tilt_deg":15,"spin_axis_azim_deg":180,"launch_height_m":3.05,"launch_angle_deg":2.0,"azimuth_deg":11,"baseline_shift_m":1.2,"depth_m":-0.3}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":130,"spin_rpm":3600,"spin_tilt_deg":25,"spin_axis_azim_deg":20,"launch_angle_deg":13,"azimuth_deg":8,"launch_height_m":1.15,"baseline_shift_m":2.5,"depth_m":1.7},
+          "backhand": {"speed_kmh":115,"spin_rpm":2500,"spin_tilt_deg":15,"spin_axis_azim_deg":-15,"launch_angle_deg":10,"azimuth_deg":-8,"launch_height_m":1.05,"baseline_shift_m":-2.0,"depth_m":1.6},
+          "slice": {"speed_kmh":88,"spin_rpm":2700,"spin_tilt_deg":120,"spin_axis_azim_deg":-40,"launch_angle_deg":5,"azimuth_deg":-8,"launch_height_m":1.0,"baseline_shift_m":-2.0,"depth_m":2.0},
+          "drop_shot": {"speed_kmh":28,"spin_rpm":1700,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":22,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.5,"depth_m":0.3}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":48,"spin_rpm":700,"spin_tilt_deg":10,"spin_axis_azim_deg":5,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.15,"baseline_shift_m":0.7,"depth_m":-6.5},
+          "backhand_volley": {"speed_kmh":45,"spin_rpm":800,"spin_tilt_deg":5,"spin_axis_azim_deg":-5,"launch_angle_deg":5,"azimuth_deg":-4,"launch_height_m":1.1,"baseline_shift_m":-0.7,"depth_m":-6.5}
+        }
+      },
+  
+      "John Isner": {
+        "serve": {
+          "first": {"speed_kmh":215,"spin_rpm":1800,"spin_tilt_deg":85,"spin_axis_azim_deg":50,"launch_height_m":3.5,"launch_angle_deg":-2.5,"azimuth_deg":1,"baseline_shift_m":0.4,"depth_m":-0.1},
+          "second": {"speed_kmh":160,"spin_rpm":3400,"spin_tilt_deg":25,"spin_axis_azim_deg":185,"launch_height_m":3.5,"launch_angle_deg":1.0,"azimuth_deg":6,"baseline_shift_m":0.4,"depth_m":-0.1}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":115,"spin_rpm":2500,"spin_tilt_deg":20,"spin_axis_azim_deg":10,"launch_angle_deg":9,"azimuth_deg":6,"launch_height_m":1.1,"baseline_shift_m":2.0,"depth_m":1.0},
+          "backhand": {"speed_kmh":100,"spin_rpm":1800,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":7,"azimuth_deg":-6,"launch_height_m":1.05,"baseline_shift_m":-1.7,"depth_m":1.3},
+          "slice": {"speed_kmh":85,"spin_rpm":3200,"spin_tilt_deg":125,"spin_axis_azim_deg":-50,"launch_angle_deg":4,"azimuth_deg":-6,"launch_height_m":1.05,"baseline_shift_m":-1.7,"depth_m":1.6},
+          "drop_shot": {"speed_kmh":26,"spin_rpm":1500,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":20,"azimuth_deg":0,"launch_height_m":0.85,"baseline_shift_m":0.3,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":52,"spin_rpm":600,"spin_tilt_deg":15,"spin_axis_azim_deg":5,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.25,"baseline_shift_m":0.6,"depth_m":-7.0},
+          "backhand_volley": {"speed_kmh":50,"spin_rpm":700,"spin_tilt_deg":10,"spin_axis_azim_deg":-5,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.2,"baseline_shift_m":-0.6,"depth_m":-7.0}
+        }
+      },
+  
+      "Roger Federer": {
+        "serve": {
+          "first": {"speed_kmh":200,"spin_rpm":2300,"spin_tilt_deg":70,"spin_axis_azim_deg":50,"launch_height_m":2.95,"launch_angle_deg":-4.0,"azimuth_deg":2,"baseline_shift_m":0.7,"depth_m":-0.2},
+          "second": {"speed_kmh":165,"spin_rpm":3600,"spin_tilt_deg":30,"spin_axis_azim_deg":185,"launch_height_m":2.95,"launch_angle_deg":0.5,"azimuth_deg":7,"baseline_shift_m":0.7,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":125,"spin_rpm":2700,"spin_tilt_deg":20,"spin_axis_azim_deg":15,"launch_angle_deg":9,"azimuth_deg":7,"launch_height_m":1.05,"baseline_shift_m":2.0,"depth_m":1.2},
+          "backhand": {"speed_kmh":115,"spin_rpm":2600,"spin_tilt_deg":25,"spin_axis_azim_deg":-20,"launch_angle_deg":10,"azimuth_deg":-7,"launch_height_m":1.1,"baseline_shift_m":-1.9,"depth_m":1.3},
+          "slice": {"speed_kmh":90,"spin_rpm":3500,"spin_tilt_deg":130,"spin_axis_azim_deg":-40,"launch_angle_deg":4,"azimuth_deg":-7,"launch_height_m":1.05,"baseline_shift_m":-1.9,"depth_m":1.6},
+          "drop_shot": {"speed_kmh":30,"spin_rpm":1900,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":24,"azimuth_deg":0,"launch_height_m":0.95,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":50,"spin_rpm":700,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":4,"launch_height_m":1.2,"baseline_shift_m":0.9,"depth_m":-6.3},
+          "backhand_volley": {"speed_kmh":48,"spin_rpm":800,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":5,"azimuth_deg":-4,"launch_height_m":1.15,"baseline_shift_m":-0.9,"depth_m":-6.3}
+        }
+      },
+  
+      "Carlos Alcaraz": {
+        "serve": {
+          "first": {"speed_kmh":195,"spin_rpm":2500,"spin_tilt_deg":60,"spin_axis_azim_deg":40,"launch_height_m":2.9,"launch_angle_deg":-3.5,"azimuth_deg":3,"baseline_shift_m":0.8,"depth_m":-0.2},
+          "second": {"speed_kmh":170,"spin_rpm":4200,"spin_tilt_deg":25,"spin_axis_azim_deg":185,"launch_height_m":2.9,"launch_angle_deg":1.0,"azimuth_deg":8,"baseline_shift_m":0.8,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":135,"spin_rpm":3200,"spin_tilt_deg":20,"spin_axis_azim_deg":20,"launch_angle_deg":12,"azimuth_deg":8,"launch_height_m":1.1,"baseline_shift_m":2.3,"depth_m":1.4},
+          "backhand": {"speed_kmh":120,"spin_rpm":2800,"spin_tilt_deg":15,"spin_axis_azim_deg":-15,"launch_angle_deg":11,"azimuth_deg":-8,"launch_height_m":1.05,"baseline_shift_m":-1.9,"depth_m":1.4},
+          "slice": {"speed_kmh":88,"spin_rpm":2800,"spin_tilt_deg":120,"spin_axis_azim_deg":-35,"launch_angle_deg":4,"azimuth_deg":-7,"launch_height_m":1.0,"baseline_shift_m":-1.9,"depth_m":1.8},
+          "drop_shot": {"speed_kmh":32,"spin_rpm":2000,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":26,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.6,"depth_m":0.3}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":52,"spin_rpm":700,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":5,"azimuth_deg":4,"launch_height_m":1.2,"baseline_shift_m":0.9,"depth_m":-6.0},
+          "backhand_volley": {"speed_kmh":50,"spin_rpm":800,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":5,"azimuth_deg":-4,"launch_height_m":1.15,"baseline_shift_m":-0.9,"depth_m":-6.0}
+        }
+      },
+  
+      "Jannik Sinner": {
+        "serve": {
+          "first": {"speed_kmh":200,"spin_rpm":2300,"spin_tilt_deg":55,"spin_axis_azim_deg":35,"launch_height_m":2.95,"launch_angle_deg":-3.5,"azimuth_deg":2,"baseline_shift_m":0.7,"depth_m":-0.2},
+          "second": {"speed_kmh":170,"spin_rpm":3900,"spin_tilt_deg":25,"spin_axis_azim_deg":180,"launch_height_m":2.95,"launch_angle_deg":0.8,"azimuth_deg":7,"baseline_shift_m":0.7,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":140,"spin_rpm":2600,"spin_tilt_deg":15,"spin_axis_azim_deg":15,"launch_angle_deg":10,"azimuth_deg":7,"launch_height_m":1.05,"baseline_shift_m":2.1,"depth_m":1.3},
+          "backhand": {"speed_kmh":135,"spin_rpm":2500,"spin_tilt_deg":15,"spin_axis_azim_deg":-10,"launch_angle_deg":9,"azimuth_deg":-7,"launch_height_m":1.05,"baseline_shift_m":-1.8,"depth_m":1.3},
+          "slice": {"speed_kmh":85,"spin_rpm":2600,"spin_tilt_deg":115,"spin_axis_azim_deg":-35,"launch_angle_deg":3,"azimuth_deg":-7,"launch_height_m":1.0,"baseline_shift_m":-1.8,"depth_m":1.7},
+          "drop_shot": {"speed_kmh":28,"spin_rpm":1700,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":22,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":48,"spin_rpm":600,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.2,"baseline_shift_m":0.8,"depth_m":-6.1},
+          "backhand_volley": {"speed_kmh":46,"spin_rpm":700,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.15,"baseline_shift_m":-0.8,"depth_m":-6.1}
+        }
+      },
+  
+      "Daniil Medvedev": {
+        "serve": {
+          "first": {"speed_kmh":205,"spin_rpm":2200,"spin_tilt_deg":65,"spin_axis_azim_deg":40,"launch_height_m":3.0,"launch_angle_deg":-3.5,"azimuth_deg":2,"baseline_shift_m":0.7,"depth_m":-0.2},
+          "second": {"speed_kmh":170,"spin_rpm":3600,"spin_tilt_deg":30,"spin_axis_azim_deg":180,"launch_height_m":3.0,"launch_angle_deg":0.5,"azimuth_deg":7,"baseline_shift_m":0.7,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":125,"spin_rpm":2200,"spin_tilt_deg":10,"spin_axis_azim_deg":10,"launch_angle_deg":7,"azimuth_deg":6,"launch_height_m":1.0,"baseline_shift_m":1.7,"depth_m":2.5},
+          "backhand": {"speed_kmh":125,"spin_rpm":2100,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":7,"azimuth_deg":-6,"launch_height_m":1.0,"baseline_shift_m":-1.7,"depth_m":2.5},
+          "slice": {"speed_kmh":82,"spin_rpm":2600,"spin_tilt_deg":115,"spin_axis_azim_deg":-30,"launch_angle_deg":3,"azimuth_deg":-6,"launch_height_m":0.95,"baseline_shift_m":-1.7,"depth_m":2.8},
+          "drop_shot": {"speed_kmh":26,"spin_rpm":1500,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":20,"azimuth_deg":0,"launch_height_m":0.85,"baseline_shift_m":0.3,"depth_m":0.6}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":45,"spin_rpm":600,"spin_tilt_deg":10,"spin_axis_azim_deg":5,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.15,"baseline_shift_m":0.7,"depth_m":-5.8},
+          "backhand_volley": {"speed_kmh":44,"spin_rpm":650,"spin_tilt_deg":10,"spin_axis_azim_deg":-5,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.1,"baseline_shift_m":-0.7,"depth_m":-5.8}
+        }
+      },
+  
+      "Alexander Zverev": {
+        "serve": {
+          "first": {"speed_kmh":205,"spin_rpm":2500,"spin_tilt_deg":60,"spin_axis_azim_deg":35,"launch_height_m":3.2,"launch_angle_deg":-3.0,"azimuth_deg":2,"baseline_shift_m":0.7,"depth_m":-0.2},
+          "second": {"speed_kmh":155,"spin_rpm":4800,"spin_tilt_deg":20,"spin_axis_azim_deg":185,"launch_height_m":3.2,"launch_angle_deg":2.5,"azimuth_deg":9,"baseline_shift_m":0.7,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":130,"spin_rpm":2500,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":9,"azimuth_deg":6,"launch_height_m":1.05,"baseline_shift_m":2.0,"depth_m":1.4},
+          "backhand": {"speed_kmh":130,"spin_rpm":2400,"spin_tilt_deg":15,"spin_axis_azim_deg":-10,"launch_angle_deg":8,"azimuth_deg":-6,"launch_height_m":1.05,"baseline_shift_m":-1.9,"depth_m":1.4},
+          "slice": {"speed_kmh":85,"spin_rpm":2600,"spin_tilt_deg":115,"spin_axis_azim_deg":-35,"launch_angle_deg":3,"azimuth_deg":-6,"launch_height_m":1.0,"baseline_shift_m":-1.9,"depth_m":1.8},
+          "drop_shot": {"speed_kmh":26,"spin_rpm":1600,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":21,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":46,"spin_rpm":600,"spin_tilt_deg":10,"spin_axis_azim_deg":5,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.2,"baseline_shift_m":0.7,"depth_m":-6.2},
+          "backhand_volley": {"speed_kmh":45,"spin_rpm":650,"spin_tilt_deg":10,"spin_axis_azim_deg":-5,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.15,"baseline_shift_m":-0.7,"depth_m":-6.2}
+        }
+      },
+  
+      "Holger Rune": {
+        "serve": {
+          "first": {"speed_kmh":195,"spin_rpm":2600,"spin_tilt_deg":60,"spin_axis_azim_deg":35,"launch_height_m":2.9,"launch_angle_deg":-3.0,"azimuth_deg":2,"baseline_shift_m":0.7,"depth_m":-0.2},
+          "second": {"speed_kmh":165,"spin_rpm":4200,"spin_tilt_deg":25,"spin_axis_azim_deg":185,"launch_height_m":2.9,"launch_angle_deg":1.5,"azimuth_deg":8,"baseline_shift_m":0.7,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":130,"spin_rpm":3200,"spin_tilt_deg":20,"spin_axis_azim_deg":20,"launch_angle_deg":11,"azimuth_deg":7,"launch_height_m":1.05,"baseline_shift_m":2.1,"depth_m":1.5},
+          "backhand": {"speed_kmh":120,"spin_rpm":2800,"spin_tilt_deg":15,"spin_axis_azim_deg":-15,"launch_angle_deg":10,"azimuth_deg":-7,"launch_height_m":1.05,"baseline_shift_m":-1.9,"depth_m":1.5},
+          "slice": {"speed_kmh":82,"spin_rpm":2600,"spin_tilt_deg":115,"spin_axis_azim_deg":-35,"launch_angle_deg":3,"azimuth_deg":-7,"launch_height_m":1.0,"baseline_shift_m":-1.9,"depth_m":1.9},
+          "drop_shot": {"speed_kmh":28,"spin_rpm":1800,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":24,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.5,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":46,"spin_rpm":650,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.15,"baseline_shift_m":0.8,"depth_m":-6.0},
+          "backhand_volley": {"speed_kmh":44,"spin_rpm":700,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.1,"baseline_shift_m":-0.8,"depth_m":-6.0}
+        }
+      },
+  
+      "Stan Wawrinka": {
+        "serve": {
+          "first": {"speed_kmh":195,"spin_rpm":2400,"spin_tilt_deg":65,"spin_axis_azim_deg":40,"launch_height_m":2.95,"launch_angle_deg":-3.5,"azimuth_deg":2,"baseline_shift_m":0.7,"depth_m":-0.2},
+          "second": {"speed_kmh":165,"spin_rpm":3800,"spin_tilt_deg":25,"spin_axis_azim_deg":185,"launch_height_m":2.95,"launch_angle_deg":1.0,"azimuth_deg":8,"baseline_shift_m":0.7,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":125,"spin_rpm":2600,"spin_tilt_deg":15,"spin_axis_azim_deg":15,"launch_angle_deg":9,"azimuth_deg":7,"launch_height_m":1.05,"baseline_shift_m":2.0,"depth_m":1.4},
+          "backhand": {"speed_kmh":130,"spin_rpm":3200,"spin_tilt_deg":25,"spin_axis_azim_deg":-20,"launch_angle_deg":11,"azimuth_deg":-7,"launch_height_m":1.1,"baseline_shift_m":-2.1,"depth_m":1.4},
+          "slice": {"speed_kmh":88,"spin_rpm":3200,"spin_tilt_deg":125,"spin_axis_azim_deg":-40,"launch_angle_deg":4,"azimuth_deg":-7,"launch_height_m":1.05,"baseline_shift_m":-2.1,"depth_m":1.8},
+          "drop_shot": {"speed_kmh":28,"spin_rpm":1700,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":23,"azimuth_deg":0,"launch_height_m":0.9,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":46,"spin_rpm":650,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.2,"baseline_shift_m":0.8,"depth_m":-6.2},
+          "backhand_volley": {"speed_kmh":44,"spin_rpm":750,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.15,"baseline_shift_m":-0.8,"depth_m":-6.2}
+        }
+      },
+  
+      "Serena Williams": {
+        "serve": {
+          "first": {"speed_kmh":185,"spin_rpm":2300,"spin_tilt_deg":65,"spin_axis_azim_deg":40,"launch_height_m":2.75,"launch_angle_deg":-4.0,"azimuth_deg":2,"baseline_shift_m":0.6,"depth_m":-0.2},
+          "second": {"speed_kmh":155,"spin_rpm":3600,"spin_tilt_deg":25,"spin_axis_azim_deg":185,"launch_height_m":2.75,"launch_angle_deg":0.8,"azimuth_deg":8,"baseline_shift_m":0.6,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":125,"spin_rpm":2600,"spin_tilt_deg":15,"spin_axis_azim_deg":15,"launch_angle_deg":9,"azimuth_deg":7,"launch_height_m":1.0,"baseline_shift_m":1.9,"depth_m":1.2},
+          "backhand": {"speed_kmh":120,"spin_rpm":2400,"spin_tilt_deg":15,"spin_axis_azim_deg":-15,"launch_angle_deg":8,"azimuth_deg":-7,"launch_height_m":1.0,"baseline_shift_m":-1.9,"depth_m":1.2},
+          "slice": {"speed_kmh":85,"spin_rpm":2600,"spin_tilt_deg":115,"spin_axis_azim_deg":-35,"launch_angle_deg":3,"azimuth_deg":-7,"launch_height_m":0.95,"baseline_shift_m":-1.9,"depth_m":1.6},
+          "drop_shot": {"speed_kmh":28,"spin_rpm":1700,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":23,"azimuth_deg":0,"launch_height_m":0.85,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":48,"spin_rpm":650,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":4,"launch_height_m":1.15,"baseline_shift_m":0.7,"depth_m":-6.0},
+          "backhand_volley": {"speed_kmh":46,"spin_rpm":700,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":4,"azimuth_deg":-4,"launch_height_m":1.1,"baseline_shift_m":-0.7,"depth_m":-6.0}
+        }
+      },
+  
+      "Iga Swiatek": {
+        "serve": {
+          "first": {"speed_kmh":170,"spin_rpm":2800,"spin_tilt_deg":55,"spin_axis_azim_deg":35,"launch_height_m":2.7,"launch_angle_deg":-3.0,"azimuth_deg":2,"baseline_shift_m":0.6,"depth_m":-0.2},
+          "second": {"speed_kmh":150,"spin_rpm":4200,"spin_tilt_deg":20,"spin_axis_azim_deg":185,"launch_height_m":2.7,"launch_angle_deg":2.0,"azimuth_deg":9,"baseline_shift_m":0.6,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":120,"spin_rpm":3300,"spin_tilt_deg":20,"spin_axis_azim_deg":20,"launch_angle_deg":12,"azimuth_deg":8,"launch_height_m":1.0,"baseline_shift_m":2.1,"depth_m":1.5},
+          "backhand": {"speed_kmh":115,"spin_rpm":2800,"spin_tilt_deg":15,"spin_axis_azim_deg":-15,"launch_angle_deg":10,"azimuth_deg":-8,"launch_height_m":1.0,"baseline_shift_m":-1.9,"depth_m":1.5},
+          "slice": {"speed_kmh":82,"spin_rpm":2600,"spin_tilt_deg":115,"spin_axis_azim_deg":-35,"launch_angle_deg":3,"azimuth_deg":-7,"launch_height_m":0.95,"baseline_shift_m":-1.9,"depth_m":1.9},
+          "drop_shot": {"speed_kmh":26,"spin_rpm":1800,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":24,"azimuth_deg":0,"launch_height_m":0.85,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":44,"spin_rpm":600,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.1,"baseline_shift_m":0.7,"depth_m":-5.8},
+          "backhand_volley": {"speed_kmh":42,"spin_rpm":650,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.05,"baseline_shift_m":-0.7,"depth_m":-5.8}
+        }
+      },
+  
+      "Aryna Sabalenka": {
+        "serve": {
+          "first": {"speed_kmh":190,"spin_rpm":2400,"spin_tilt_deg":60,"spin_axis_azim_deg":40,"launch_height_m":2.75,"launch_angle_deg":-3.5,"azimuth_deg":2,"baseline_shift_m":0.6,"depth_m":-0.2},
+          "second": {"speed_kmh":160,"spin_rpm":3800,"spin_tilt_deg":25,"spin_axis_azim_deg":185,"launch_height_m":2.75,"launch_angle_deg":1.0,"azimuth_deg":8,"baseline_shift_m":0.6,"depth_m":-0.2}
+        },
+        "groundstrokes": {
+          "forehand": {"speed_kmh":130,"spin_rpm":2400,"spin_tilt_deg":15,"spin_axis_azim_deg":15,"launch_angle_deg":9,"azimuth_deg":7,"launch_height_m":1.0,"baseline_shift_m":2.0,"depth_m":1.3},
+          "backhand": {"speed_kmh":130,"spin_rpm":2300,"spin_tilt_deg":15,"spin_axis_azim_deg":-15,"launch_angle_deg":8,"azimuth_deg":-7,"launch_height_m":1.0,"baseline_shift_m":-2.0,"depth_m":1.3},
+          "slice": {"speed_kmh":80,"spin_rpm":2400,"spin_tilt_deg":110,"spin_axis_azim_deg":-30,"launch_angle_deg":3,"azimuth_deg":-7,"launch_height_m":0.95,"baseline_shift_m":-2.0,"depth_m":1.7},
+          "drop_shot": {"speed_kmh":24,"spin_rpm":1600,"spin_tilt_deg":0,"spin_axis_azim_deg":0,"launch_angle_deg":22,"azimuth_deg":0,"launch_height_m":0.85,"baseline_shift_m":0.4,"depth_m":0.4}
+        },
+        "volleys": {
+          "forehand_volley": {"speed_kmh":46,"spin_rpm":600,"spin_tilt_deg":15,"spin_axis_azim_deg":10,"launch_angle_deg":4,"azimuth_deg":3,"launch_height_m":1.1,"baseline_shift_m":0.7,"depth_m":-5.9},
+          "backhand_volley": {"speed_kmh":44,"spin_rpm":650,"spin_tilt_deg":10,"spin_axis_azim_deg":-10,"launch_angle_deg":4,"azimuth_deg":-3,"launch_height_m":1.05,"baseline_shift_m":-0.7,"depth_m":-5.9}
+        }
+      }
+    }
+  }
+  

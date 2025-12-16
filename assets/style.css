@@ -1,0 +1,26 @@
+.dark-dropdown .Select-control {
+    background-color: #222 !important;
+    color: white !important;
+}
+
+.dark-dropdown .Select-menu-outer {
+    background-color: #222 !important;
+    color: white !important;
+}
+
+.dark-dropdown .Select-value-label {
+    color: white !important;
+}
+
+.dark-dropdown .Select-placeholder {
+    color: #bbb !important;
+}
+
+.dark-dropdown .Select-option {
+    background-color: #222 !important;
+    color: white !important;
+}
+
+.dark-dropdown .Select-option:hover {
+    background-color: #444 !important;
+}

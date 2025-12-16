@@ -1,0 +1,400 @@
+{
+    "players": {
+      "rec_2_5": {
+        "serve": {
+          "flat": {
+            "launch_height_m": 2.40, "depth_m": -0.1, "center_shift_m": 0.3,
+            "launch_speed_kmh": 110, "launch_angle_deg": -6, "launch_azimuth_deg": 2,
+            "spin_rpm": 800, "spin_azim_deg": 10, "spin_gyro_rpm": 150
+          },
+          "slice_deuce": {
+            "launch_height_m": 2.40, "depth_m": -0.1, "center_shift_m": 0.4,
+            "launch_speed_kmh": 105, "launch_angle_deg": -5, "launch_azimuth_deg": 6,
+            "spin_rpm": 1200, "spin_azim_deg": 35, "spin_gyro_rpm": 200
+          },
+          "slice_ad": {
+            "launch_height_m": 2.40, "depth_m": -0.1, "center_shift_m": -0.4,
+            "launch_speed_kmh": 105, "launch_angle_deg": -5, "launch_azimuth_deg": -6,
+            "spin_rpm": 1200, "spin_azim_deg": -35, "spin_gyro_rpm": 200
+          },
+          "kick_deuce": {
+            "launch_height_m": 2.40, "depth_m": -0.1, "center_shift_m": 0.25,
+            "launch_speed_kmh": 90, "launch_angle_deg": 1, "launch_azimuth_deg": 5,
+            "spin_rpm": 1800, "spin_azim_deg": -20, "spin_gyro_rpm": 80
+          },
+          "kick_ad": {
+            "launch_height_m": 2.40, "depth_m": -0.1, "center_shift_m": -0.25,
+            "launch_speed_kmh": 90, "launch_angle_deg": 1, "launch_azimuth_deg": -5,
+            "spin_rpm": 1800, "spin_azim_deg": -20, "spin_gyro_rpm": 80
+          }
+        },
+  
+        "groundstrokes": {
+          "forehand": {
+            "launch_height_m": 0.9, "depth_m": 1.8, "center_shift_m": 1.2,
+            "launch_speed_kmh": 70, "launch_angle_deg": 10, "launch_azimuth_deg": 5,
+            "spin_rpm": 1000, "spin_azim_deg": 5, "spin_gyro_rpm": 80
+          },
+          "backhand": {
+            "launch_height_m": 0.85, "depth_m": 1.8, "center_shift_m": -1.1,
+            "launch_speed_kmh": 60, "launch_angle_deg": 9, "launch_azimuth_deg": -5,
+            "spin_rpm": 800, "spin_azim_deg": -5, "spin_gyro_rpm": 70
+          },
+          "slice": {
+            "launch_height_m": 0.85, "depth_m": 2.0, "center_shift_m": -1.1,
+            "launch_speed_kmh": 55, "launch_angle_deg": 6, "launch_azimuth_deg": -5,
+            "spin_rpm": -1200, "spin_azim_deg": 15, "spin_gyro_rpm": 120
+          },
+          "drop_shot": {
+            "launch_height_m": 0.75, "depth_m": 1.5, "center_shift_m": 0.5,
+            "launch_speed_kmh": 20, "launch_angle_deg": 20, "launch_azimuth_deg": 0,
+            "spin_rpm": -600, "spin_azim_deg": 0, "spin_gyro_rpm": 20
+          }
+        },
+  
+        "volleys": {
+          "forehand": {
+            "launch_height_m": 1.0, "depth_m": -4.0, "center_shift_m": 0.7,
+            "launch_speed_kmh": 35, "launch_angle_deg": 4, "launch_azimuth_deg": 3,
+            "spin_rpm": -400, "spin_azim_deg": 5, "spin_gyro_rpm": 60
+          },
+          "backhand": {
+            "launch_height_m": 0.95, "depth_m": -4.0, "center_shift_m": -0.7,
+            "launch_speed_kmh": 32, "launch_angle_deg": 4, "launch_azimuth_deg": -3,
+            "spin_rpm": -450, "spin_azim_deg": 5, "spin_gyro_rpm": 60
+          }
+        }
+      },
+  
+      "rec_3_5": {
+        "serve": {
+          "flat": {
+            "launch_height_m": 2.55, "depth_m": -0.1, "center_shift_m": 0.4,
+            "launch_speed_kmh": 140, "launch_angle_deg": -5, "launch_azimuth_deg": 2,
+            "spin_rpm": 1500, "spin_azim_deg": 10, "spin_gyro_rpm": 200
+          },
+          "slice_deuce": {
+            "launch_height_m": 2.55, "depth_m": -0.1, "center_shift_m": 0.5,
+            "launch_speed_kmh": 135, "launch_angle_deg": -4, "launch_azimuth_deg": 6,
+            "spin_rpm": 2000, "spin_azim_deg": 30, "spin_gyro_rpm": 300
+          },
+          "slice_ad": {
+            "launch_height_m": 2.55, "depth_m": -0.1, "center_shift_m": -0.5,
+            "launch_speed_kmh": 135, "launch_angle_deg": -4, "launch_azimuth_deg": -6,
+            "spin_rpm": 2000, "spin_azim_deg": -30, "spin_gyro_rpm": 300
+          },
+          "kick_deuce": {
+            "launch_height_m": 2.55, "depth_m": -0.1, "center_shift_m": 0.35,
+            "launch_speed_kmh": 120, "launch_angle_deg": 1, "launch_azimuth_deg": 5,
+            "spin_rpm": 2600, "spin_azim_deg": -25, "spin_gyro_rpm": 120
+          },
+          "kick_ad": {
+            "launch_height_m": 2.55, "depth_m": -0.1, "center_shift_m": -0.35,
+            "launch_speed_kmh": 120, "launch_angle_deg": 1, "launch_azimuth_deg": -5,
+            "spin_rpm": 2600, "spin_azim_deg": -25, "spin_gyro_rpm": 120
+          }
+        },
+  
+        "groundstrokes": {
+          "forehand": {
+            "launch_height_m": 1.0, "depth_m": 1.4, "center_shift_m": 1.8,
+            "launch_speed_kmh": 95, "launch_angle_deg": 12, "launch_azimuth_deg": 7,
+            "spin_rpm": 1800, "spin_azim_deg": 10, "spin_gyro_rpm": 150
+          },
+          "backhand": {
+            "launch_height_m": 0.95, "depth_m": 1.4, "center_shift_m": -1.7,
+            "launch_speed_kmh": 85, "launch_angle_deg": 10, "launch_azimuth_deg": -7,
+            "spin_rpm": 1500, "spin_azim_deg": -10, "spin_gyro_rpm": 120
+          },
+          "slice": {
+            "launch_height_m": 0.95, "depth_m": 1.8, "center_shift_m": -1.7,
+            "launch_speed_kmh": 80, "launch_angle_deg": 5, "launch_azimuth_deg": -7,
+            "spin_rpm": -2200, "spin_azim_deg": 15, "spin_gyro_rpm": 150
+          },
+          "drop_shot": {
+            "launch_height_m": 0.85, "depth_m": 1.0, "center_shift_m": 0.6,
+            "launch_speed_kmh": 24, "launch_angle_deg": 24, "launch_azimuth_deg": 0,
+            "spin_rpm": -900, "spin_azim_deg": 0, "spin_gyro_rpm": 40
+          }
+        },
+  
+        "volleys": {
+          "forehand": {
+            "launch_height_m": 1.1, "depth_m": -4.8, "center_shift_m": 0.8,
+            "launch_speed_kmh": 40, "launch_angle_deg": 4, "launch_azimuth_deg": 4,
+            "spin_rpm": -500, "spin_azim_deg": 10, "spin_gyro_rpm": 100
+          },
+          "backhand": {
+            "launch_height_m": 1.05, "depth_m": -4.8, "center_shift_m": -0.8,
+            "launch_speed_kmh": 38, "launch_angle_deg": 4, "launch_azimuth_deg": -4,
+            "spin_rpm": -550, "spin_azim_deg": 10, "spin_gyro_rpm": 100
+          }
+        }
+      },
+  
+      "rec_4_5": {
+        "serve": {
+          "flat": {
+            "launch_height_m": 2.65, "depth_m": -0.1, "center_shift_m": 0.5,
+            "launch_speed_kmh": 165, "launch_angle_deg": -4, "launch_azimuth_deg": 2,
+            "spin_rpm": 2200, "spin_azim_deg": 10, "spin_gyro_rpm": 200
+          },
+          "slice_deuce": {
+            "launch_height_m": 2.65, "depth_m": -0.1, "center_shift_m": 0.6,
+            "launch_speed_kmh": 160, "launch_angle_deg": -3, "launch_azimuth_deg": 7,
+            "spin_rpm": 2600, "spin_azim_deg": 35, "spin_gyro_rpm": 350
+          },
+          "slice_ad": {
+            "launch_height_m": 2.65, "depth_m": -0.1, "center_shift_m": -0.6,
+            "launch_speed_kmh": 160, "launch_angle_deg": -3, "launch_azimuth_deg": -7,
+            "spin_rpm": 2600, "spin_azim_deg": -35, "spin_gyro_rpm": 350
+          },
+          "kick_deuce": {
+            "launch_height_m": 2.65, "depth_m": -0.1, "center_shift_m": 0.45,
+            "launch_speed_kmh": 135, "launch_angle_deg": 1, "launch_azimuth_deg": 6,
+            "spin_rpm": 3300, "spin_azim_deg": -30, "spin_gyro_rpm": 150
+          },
+          "kick_ad": {
+            "launch_height_m": 2.65, "depth_m": -0.1, "center_shift_m": -0.45,
+            "launch_speed_kmh": 135, "launch_angle_deg": 1, "launch_azimuth_deg": -6,
+            "spin_rpm": 3300, "spin_azim_deg": -30, "spin_gyro_rpm": 150
+          }
+        },
+  
+        "groundstrokes": {
+          "forehand": {
+            "launch_height_m": 1.05, "depth_m": 1.2, "center_shift_m": 2.0,
+            "launch_speed_kmh": 115, "launch_angle_deg": 10, "launch_azimuth_deg": 6,
+            "spin_rpm": 2600, "spin_azim_deg": 5, "spin_gyro_rpm": 150
+          },
+          "backhand": {
+            "launch_height_m": 1.0, "depth_m": 1.2, "center_shift_m": -1.9,
+            "launch_speed_kmh": 105, "launch_angle_deg": 9, "launch_azimuth_deg": -6,
+            "spin_rpm": 2300, "spin_azim_deg": -5, "spin_gyro_rpm": 120
+          },
+          "slice": {
+            "launch_height_m": 1.0, "depth_m": 1.5, "center_shift_m": -1.9,
+            "launch_speed_kmh": 90, "launch_angle_deg": 4, "launch_azimuth_deg": -6,
+            "spin_rpm": -3000, "spin_azim_deg": 10, "spin_gyro_rpm": 180
+          },
+          "drop_shot": {
+            "launch_height_m": 0.9, "depth_m": 0.4, "center_shift_m": 0.5,
+            "launch_speed_kmh": 26, "launch_angle_deg": 22, "launch_azimuth_deg": 0,
+            "spin_rpm": -1300, "spin_azim_deg": 0, "spin_gyro_rpm": 35
+          }
+        },
+  
+        "volleys": {
+          "forehand": {
+            "launch_height_m": 1.15, "depth_m": -5.4, "center_shift_m": 0.8,
+            "launch_speed_kmh": 45, "launch_angle_deg": 4, "launch_azimuth_deg": 3,
+            "spin_rpm": -550, "spin_azim_deg": 10, "spin_gyro_rpm": 90
+          },
+          "backhand": {
+            "launch_height_m": 1.1, "depth_m": -5.4, "center_shift_m": -0.8,
+            "launch_speed_kmh": 43, "launch_angle_deg": 4, "launch_azimuth_deg": -3,
+            "spin_rpm": -600, "spin_azim_deg": 10, "spin_gyro_rpm": 90
+          }
+        }
+      },
+  
+      "Novak Djokovic": {
+        "serve": {
+          "flat": {
+            "launch_height_m": 3.00, "depth_m": -0.2, "center_shift_m": 0.6,
+            "launch_speed_kmh": 185, "launch_angle_deg": -3.5, "launch_azimuth_deg": 2,
+            "spin_rpm": 2600, "spin_azim_deg": 10, "spin_gyro_rpm": 300
+          },
+          "slice_deuce": {
+            "launch_height_m": 3.00, "depth_m": -0.2, "center_shift_m": 0.7,
+            "launch_speed_kmh": 180, "launch_angle_deg": -3, "launch_azimuth_deg": 7,
+            "spin_rpm": 3000, "spin_azim_deg": 40, "spin_gyro_rpm": 450
+          },
+          "slice_ad": {
+            "launch_height_m": 3.00, "depth_m": -0.2, "center_shift_m": -0.7,
+            "launch_speed_kmh": 180, "launch_angle_deg": -3, "launch_azimuth_deg": -7,
+            "spin_rpm": 3000, "spin_azim_deg": -40, "spin_gyro_rpm": 450
+          },
+          "kick_deuce": {
+            "launch_height_m": 3.00, "depth_m": -0.2, "center_shift_m": 0.55,
+            "launch_speed_kmh": 155, "launch_angle_deg": 1.5, "launch_azimuth_deg": 8,
+            "spin_rpm": 4300, "spin_azim_deg": -30, "spin_gyro_rpm": 250
+          },
+          "kick_ad": {
+            "launch_height_m": 3.00, "depth_m": -0.2, "center_shift_m": -0.55,
+            "launch_speed_kmh": 155, "launch_angle_deg": 1.5, "launch_azimuth_deg": -8,
+            "spin_rpm": 4300, "spin_azim_deg": -30, "spin_gyro_rpm": 250
+          }
+        },
+  
+        "groundstrokes": {
+          "forehand": {
+            "launch_height_m": 1.05, "depth_m": 1.3, "center_shift_m": 1.8,
+            "launch_speed_kmh": 120, "launch_angle_deg": 10, "launch_azimuth_deg": 7,
+            "spin_rpm": 3300, "spin_azim_deg": 10, "spin_gyro_rpm": 150
+          },
+          "backhand": {
+            "launch_height_m": 1.05, "depth_m": 1.3, "center_shift_m": -1.8,
+            "launch_speed_kmh": 115, "launch_angle_deg": 9, "launch_azimuth_deg": -7,
+            "spin_rpm": 2600, "spin_azim_deg": -10, "spin_gyro_rpm": 130
+          },
+          "slice": {
+            "launch_height_m": 1.0, "depth_m": 1.6, "center_shift_m": -1.8,
+            "launch_speed_kmh": 85, "launch_angle_deg": 3, "launch_azimuth_deg": -7,
+            "spin_rpm": -3000, "spin_azim_deg": 15, "spin_gyro_rpm": 180
+          },
+          "drop_shot": {
+            "launch_height_m": 0.95, "depth_m": 0.4, "center_shift_m": 0.3,
+            "launch_speed_kmh": 32, "launch_angle_deg": 28, "launch_azimuth_deg": 0,
+            "spin_rpm": -900, "spin_azim_deg": 0, "spin_gyro_rpm": 30
+          }
+        },
+  
+        "volleys": {
+          "forehand": {
+            "launch_height_m": 1.2, "depth_m": -6.2, "center_shift_m": 0.8,
+            "launch_speed_kmh": 50, "launch_angle_deg": 4, "launch_azimuth_deg": 4,
+            "spin_rpm": -700, "spin_azim_deg": 10, "spin_gyro_rpm": 120
+          },
+          "backhand": {
+            "launch_height_m": 1.15, "depth_m": -6.2, "center_shift_m": -0.8,
+            "launch_speed_kmh": 48, "launch_angle_deg": 5, "launch_azimuth_deg": -4,
+            "spin_rpm": -900, "spin_azim_deg": 10, "spin_gyro_rpm": 120
+          }
+        }
+      },
+  
+      "Rafael Nadal": {
+        "serve": {
+          "flat": {
+            "launch_height_m": 3.05, "depth_m": -0.3, "center_shift_m": 1.2,
+            "launch_speed_kmh": 175, "launch_angle_deg": -2, "launch_azimuth_deg": 4,
+            "spin_rpm": 3400, "spin_azim_deg": 15, "spin_gyro_rpm": 350
+          },
+          "slice_deuce": {
+            "launch_height_m": 3.05, "depth_m": -0.3, "center_shift_m": 1.2,
+            "launch_speed_kmh": 170, "launch_angle_deg": -2, "launch_azimuth_deg": 8,
+            "spin_rpm": 3600, "spin_azim_deg": 40, "spin_gyro_rpm": 450
+          },
+          "slice_ad": {
+            "launch_height_m": 3.05, "depth_m": -0.3, "center_shift_m": -1.2,
+            "launch_speed_kmh": 170, "launch_angle_deg": -2, "launch_azimuth_deg": -8,
+            "spin_rpm": 3600, "spin_azim_deg": -40, "spin_gyro_rpm": 450
+          },
+          "kick_deuce": {
+            "launch_height_m": 3.05, "depth_m": -0.3, "center_shift_m": 1.1,
+            "launch_speed_kmh": 150, "launch_angle_deg": 2, "launch_azimuth_deg": 11,
+            "spin_rpm": 4800, "spin_azim_deg": -20, "spin_gyro_rpm": 250
+          },
+          "kick_ad": {
+            "launch_height_m": 3.05, "depth_m": -0.3, "center_shift_m": -1.1,
+            "launch_speed_kmh": 150, "launch_angle_deg": 2, "launch_azimuth_deg": -11,
+            "spin_rpm": 4800, "spin_azim_deg": -20, "spin_gyro_rpm": 250
+          }
+        },
+  
+        "groundstrokes": {
+          "forehand": {
+            "launch_height_m": 1.15, "depth_m": 1.7, "center_shift_m": 2.5,
+            "launch_speed_kmh": 130, "launch_angle_deg": 13, "launch_azimuth_deg": 8,
+            "spin_rpm": 3600, "spin_azim_deg": 20, "spin_gyro_rpm": 180
+          },
+          "backhand": {
+            "launch_height_m": 1.05, "depth_m": 1.6, "center_shift_m": -2.0,
+            "launch_speed_kmh": 115, "launch_angle_deg": 10, "launch_azimuth_deg": -8,
+            "spin_rpm": 2500, "spin_azim_deg": -10, "spin_gyro_rpm": 150
+          },
+          "slice": {
+            "launch_height_m": 1.0, "depth_m": 2.0, "center_shift_m": -2.0,
+            "launch_speed_kmh": 88, "launch_angle_deg": 5, "launch_azimuth_deg": -8,
+            "spin_rpm": -2700, "spin_azim_deg": 15, "spin_gyro_rpm": 180
+          },
+          "drop_shot": {
+            "launch_height_m": 0.9, "depth_m": 0.3, "center_shift_m": 0.5,
+            "launch_speed_kmh": 28, "launch_angle_deg": 22, "launch_azimuth_deg": 0,
+            "spin_rpm": -1700, "spin_azim_deg": 0, "spin_gyro_rpm": 40
+          }
+        },
+  
+        "volleys": {
+          "forehand": {
+            "launch_height_m": 1.15, "depth_m": -6.5, "center_shift_m": 0.7,
+            "launch_speed_kmh": 48, "launch_angle_deg": 4, "launch_azimuth_deg": 3,
+            "spin_rpm": -700, "spin_azim_deg": 8, "spin_gyro_rpm": 120
+          },
+          "backhand": {
+            "launch_height_m": 1.1, "depth_m": -6.5, "center_shift_m": -0.7,
+            "launch_speed_kmh": 45, "launch_angle_deg": 5, "launch_azimuth_deg": -4,
+            "spin_rpm": -800, "spin_azim_deg": 8, "spin_gyro_rpm": 120
+          }
+        }
+      },
+  
+      "Roger Federer": {
+        "serve": {
+          "flat": {
+            "launch_height_m": 2.95, "depth_m": -0.2, "center_shift_m": 0.7,
+            "launch_speed_kmh": 200, "launch_angle_deg": -4, "launch_azimuth_deg": 2,
+            "spin_rpm": 2300, "spin_azim_deg": 10, "spin_gyro_rpm": 250
+          },
+          "slice_deuce": {
+            "launch_height_m": 2.95, "depth_m": -0.2, "center_shift_m": 0.8,
+            "launch_speed_kmh": 190, "launch_angle_deg": -3.2, "launch_azimuth_deg": 8,
+            "spin_rpm": 2600, "spin_azim_deg": 40, "spin_gyro_rpm": 300
+          },
+          "slice_ad": {
+            "launch_height_m": 2.95, "depth_m": -0.2, "center_shift_m": -0.8,
+            "launch_speed_kmh": 190, "launch_angle_deg": -3.2, "launch_azimuth_deg": -8,
+            "spin_rpm": 2600, "spin_azim_deg": -40, "spin_gyro_rpm": 300
+          },
+          "kick_deuce": {
+            "launch_height_m": 2.95, "depth_m": -0.2, "center_shift_m": 0.65,
+            "launch_speed_kmh": 165, "launch_angle_deg": 0.5, "launch_azimuth_deg": 7,
+            "spin_rpm": 3600, "spin_azim_deg": -25, "spin_gyro_rpm": 180
+          },
+          "kick_ad": {
+            "launch_height_m": 2.95, "depth_m": -0.2, "center_shift_m": -0.65,
+            "launch_speed_kmh": 165, "launch_angle_deg": 0.5, "launch_azimuth_deg": -7,
+            "spin_rpm": 3600, "spin_azim_deg": -25, "spin_gyro_rpm": 180
+          }
+        },
+  
+        "groundstrokes": {
+          "forehand": {
+            "launch_height_m": 1.05, "depth_m": 1.2, "center_shift_m": 2.0,
+            "launch_speed_kmh": 125, "launch_angle_deg": 9, "launch_azimuth_deg": 7,
+            "spin_rpm": 2700, "spin_azim_deg": 10, "spin_gyro_rpm": 150
+          },
+          "backhand": {
+            "launch_height_m": 1.1, "depth_m": 1.3, "center_shift_m": -1.9,
+            "launch_speed_kmh": 115, "launch_angle_deg": 10, "launch_azimuth_deg": -7,
+            "spin_rpm": 2600, "spin_azim_deg": -15, "spin_gyro_rpm": 140
+          },
+          "slice": {
+            "launch_height_m": 1.05, "depth_m": 1.6, "center_shift_m": -1.9,
+            "launch_speed_kmh": 90, "launch_angle_deg": 4, "launch_azimuth_deg": -7,
+            "spin_rpm": -3500, "spin_azim_deg": 20, "spin_gyro_rpm": 200
+          },
+          "drop_shot": {
+            "launch_height_m": 0.95, "depth_m": 0.4, "center_shift_m": 0.4,
+            "launch_speed_kmh": 30, "launch_angle_deg": 24, "launch_azimuth_deg": 0,
+            "spin_rpm": -1900, "spin_azim_deg": 0, "spin_gyro_rpm": 40
+          }
+        },
+  
+        "volleys": {
+          "forehand": {
+            "launch_height_m": 1.2, "depth_m": -6.3, "center_shift_m": 0.9,
+            "launch_speed_kmh": 50, "launch_angle_deg": 4, "launch_azimuth_deg": 4,
+            "spin_rpm": -700, "spin_azim_deg": 8, "spin_gyro_rpm": 120
+          },
+          "backhand": {
+            "launch_height_m": 1.15, "depth_m": -6.3, "center_shift_m": -0.9,
+            "launch_speed_kmh": 48, "launch_angle_deg": 5, "launch_azimuth_deg": -4,
+            "spin_rpm": -800, "spin_azim_deg": 8, "spin_gyro_rpm": 120
+          }
+        }
+      }
+    }
+  }
+  
