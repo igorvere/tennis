@@ -24,3 +24,9 @@
 .dark-dropdown .Select-option:hover {
     background-color: #444 !important;
 }
+
+button {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }

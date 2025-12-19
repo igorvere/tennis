@@ -1,6 +1,5 @@
 import plotly.graph_objects as go
 from dash import Dash, dcc, html, Input, Output, State
-
 import numpy as np
 from shots import SHOT_PRESETS, preset_options
 
@@ -18,7 +17,7 @@ halfW = court_width / 2
 service = 6.40
 NET_H = 0.914   # real tennis net height at center
 NET_X = court_length / 2      # net plane location in your coordinate system
-
+camera = None
 # -------- Realistic tennis net (curved + top tape + mesh cords) --------
 def make_realistic_net():
     N = 40  # number of vertical mesh cords
@@ -146,8 +145,7 @@ def plot_court_fig(X, Y, Z, camera):
             zaxis=dict(visible=False, backgroundcolor="black"),
             aspectmode="data",
             camera = camera if camera else dict(
-                eye=dict(x=1.6, y=-2.2, z=1)
-            )
+                eye=dict(x=1.6, y=-2.2, z=1))
         ),
         margin=dict(l=0, r=0, t=0, b=0),
         showlegend=False, 
@@ -166,95 +164,201 @@ server = app.server
 slider_params = dict(updatemode = "mouseup", marks=None, tooltip={"placement": "bottom", "always_visible": True})
 slider_params2 = dict(updatemode = "mouseup", tooltip={"placement": "bottom", "always_visible": True})
 
+controls = [
+    html.H3("Adjust Shot"),
+
+    html.Label("Speed (km/h)"),
+    dcc.Slider(0, 250, 1, value=90, id="speed", **slider_params),
+
+    html.Br(),
+    html.Label("launch height (cm)"),
+    dcc.Slider(0, 350, 1, value=100, id="height", **slider_params),
+
+    html.Br(),
+    html.Label("Launch angle (°)"),
+    dcc.Slider(-10, 30, 0.1, value=10, id="elevation", **slider_params),
+
+    html.Br(),
+    html.Label("Azimuth (°)"),
+    dcc.Slider(-20, 20, 1, value=0, id="azimuth", **slider_params),
+
+    html.Br(),
+    html.Label("Spin (rpm)"),
+    dcc.Slider(-4000, 4000, 10, value=1500, id="spin", **slider_params),
+
+
+    html.Br(),
+    html.Label("Spin (°)"),
+
+    dcc.Slider(id="spin_azim_deg", min=-90, max=90, step=1, value=0,
+        marks={-90: "Left", 0: "Center", 90: "Right"}, **slider_params2
+    ),
+
+    html.Br(),
+    html.Label("Spin lateral(rpm)"),
+    dcc.Slider(-4000, 4000, 10, value=1500, id="spin_lat", **slider_params),
+
+
+    html.Br(),
+    html.Label("Depth (m from baseline)"),
+    dcc.Slider(-NET_X, NET_X, 0.1, value=0, id="impact_x", **slider_params),
+
+    html.Br(),
+    html.Label("Lateral shift (m from center)"),
+    dcc.Slider(-5, 5, 0.1, value=0, id="impact_y", **slider_params),
+
+    dcc.Store(id="prev-shot"),
+
+    html.H3("Shot Metrics"),
+    html.Div(id="metric-net-clearance", style={"marginTop": "10px", "fontSize": "18px"}),
+    html.Div(id="metric-landing-depth", style={"marginTop": "5px", "fontSize": "18px"}),
+    html.Div(id="metric-compute", style={"marginTop": "15px", "fontSize": "18px"}),
+
+    ]
+
+
 app.layout = html.Div(
-    style={"display": "flex", "flexDirection": "row", "height": "100vh"},
+    id="graph-area",
+    style={
+        "height": "100vh",
+        "background": "black",
+        "position": "relative",
+        "overflow": "hidden",
+    },
     children=[
 
-        # LEFT: Court visualization
+        dcc.Graph(
+                id="court-graph",
+                style={"height": "100%"},
+                config={
+                    "displayModeBar": False,
+                    "scrollZoom": True,      # 🔑 REQUIRED
+                    "doubleClick": "reset",  # optional
+                },
+            ),
+
+        # Top-right buttons
         html.Div(
-            style={"flex": "4", "background": "black"},
+            style={
+                "position": "absolute",
+                "top": "12px",
+                "right": "12px",
+                "zIndex": 9999,
+                "display": "flex",
+                "gap": "8px",
+            },
             children=[
-                dcc.Graph(id="court-graph", style={"height": "100%"})
+                html.Button("＋", id="zoom-in"),
+                html.Button("－", id="zoom-out"),
+                html.Button("⟳", id="reset-camera"),
+                html.Button("⛶", **{"data-action": "fullscreen"}),
+                html.Button("☰", **{"data-action": "toggle"}),
             ],
         ),
 
-        # RIGHT: Control panel
+
+
+        # Backdrop
         html.Div(
+            id="backdrop",
+            **{"data-action": "close"},
             style={
-                "flex": "1",
+                "position": "absolute",
+                "inset": 0,
+                "background": "rgba(0,0,0,0.55)",
+                "display": "none",
+                "zIndex": 5,
+            },
+        ),
+
+        # Drawer
+        html.Div(
+            id="drawer",
+            style={
+                "position": "absolute",
+                "top": 0,
+                "right": 0,
+                "height": "100%",
+                "width": "320px",
                 "background": "#111",
-                "padding": "20px",
                 "color": "white",
-                "overflowY": "auto",
-                "borderLeft": "2px solid #333"
+                "zIndex": 8,
+                "display": "flex",
+                "flexDirection": "column",
+                "boxShadow": "-6px 0 16px rgba(0,0,0,0.6)",
+                "transform": "translateX(100%)",
+                "transition": "transform 0.25s ease",
             },
             children=[
+                html.Div(id="resize", style={
+                    "position": "absolute",
+                    "left": 0,
+                    "top": 0,
+                    "bottom": 0,
+                    "width": "8px",
+                    "cursor": "ew-resize",
+                    "background": "rgba(255,255,255,0.05)",
+                }),
 
-                html.H3("Shot Presets"),
+                html.Div("Controls", style={
+                    "padding": "12px",
+                    "borderBottom": "1px solid #222",
+                    "fontWeight": 700,
+                }),
 
-                dcc.Dropdown(
-                    id="preset-dropdown",
-                    className="dark-dropdown",
-                    options=preset_options,
-                    placeholder="Choose a preset...",
-                    clearable=True,
-                    style={"marginBottom": "20px"}
-                ),
-                html.H3("Adjust Shot"),
-
-                html.Label("Speed (km/h)"),
-                dcc.Slider(0, 250, 1, value=90, id="speed", **slider_params),
-                
-                html.Br(),
-                html.Label("launch height (cm)"),
-                dcc.Slider(0, 350, 1, value=100, id="height", **slider_params),
-
-                html.Br(),
-                html.Label("Launch angle (°)"),
-                dcc.Slider(-10, 30, 0.1, value=10, id="elevation", **slider_params),
-
-                html.Br(),
-                html.Label("Azimuth (°)"),
-                dcc.Slider(-20, 20, 1, value=0, id="azimuth", **slider_params),
-
-                html.Br(),
-                html.Label("Spin (rpm)"),
-                dcc.Slider(-4000, 4000, 10, value=1500, id="spin", **slider_params),
-
-               
-                html.Br(),
-                html.Label("Spin (°)"),
- 
-                dcc.Slider(id="spin_azim_deg", min=-90, max=90, step=1, value=0,
-                    marks={-90: "Left", 0: "Center", 90: "Right"}, **slider_params2
+                html.Div(
+                    style={"padding": "12px", "borderBottom": "1px solid #222"},
+                    children=[
+                        html.Label("Shot preset"),
+                        dcc.Dropdown(
+                            id="preset-dropdown",
+                            options=preset_options,
+                            className="dark-dropdown", 
+                            placeholder="Choose a preset...",
+                            searchable=False,
+                            clearable=False,
+                        ),
+                    ],
                 ),
 
-                html.Br(),
-                html.Label("Spin lateral(rpm)"),
-                dcc.Slider(-4000, 4000, 10, value=1500, id="spin_lat", **slider_params),
-
-                
-                html.Br(),
-                html.Label("Depth (m from baseline)"),
-                dcc.Slider(-5, 5, 0.1, value=0, id="impact_x", **slider_params),
-
-                html.Br(),
-                html.Label("Lateral shift (m from center)"),
-                dcc.Slider(-5, 5, 0.1, value=0, id="impact_y", **slider_params),
-
-                dcc.Store(id="prev-shot"),
-
-                html.H3("Shot Metrics"),
-                html.Div(id="metric-net-clearance", style={"marginTop": "10px", "fontSize": "18px"}),
-                html.Div(id="metric-landing-depth", style={"marginTop": "5px", "fontSize": "18px"}),
-                html.Div(id="metric-compute", style={"marginTop": "15px", "fontSize": "18px"}),
-
-            ]
-        )
-    ]
+                html.Div(id="controls-panel",
+                    style={
+                        "flex": "1",              # 🔑 take remaining height
+                        "overflowY": "auto",      # 🔑 single scroll owner
+                        "overflowX": "hidden",
+                        "padding": "0",           # padding moves inside sections
+                    },
+                    children=[
+                        html.Button(
+                            "▶ Launch parameters",
+                            id="toggle-launch",
+                            n_clicks=0,
+                            style={
+                                "width": "100%",
+                                "textAlign": "left",
+                                "background": "#111",
+                                "color": "white",
+                                "border": "none",
+                                "padding": "12px",
+                                "fontSize": "16px",
+                                "cursor": "pointer",
+                            },
+                        ),
+                        html.Div(
+                            id="launch-section",
+                            style={
+                                "display": "none",
+                                "padding": "12px",
+                                "borderBottom": "1px solid #222",
+                            },
+                            children=controls,
+                        ),
+                    ]
+                )
+            ],
+        ),
+    ],
 )
-
-
 
 @app.callback(
     Output("court-graph", "figure"),
@@ -271,15 +375,9 @@ app.layout = html.Div(
     Input("spin_azim_deg", "value"),
     Input("impact_x", "value"),
     Input("impact_y", "value"),
-    Input("court-graph", "relayoutData"),
     State("prev-shot", "data"),
 )
-
-def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y, relayout, prev_shot):
-
-    camera = None
-    if relayout and "scene.camera" in relayout:
-        camera = relayout["scene.camera"]
+def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y, prev_shot):
     
     time0 = time.time()
 
@@ -322,6 +420,30 @@ def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_
     return fig, new_prev, clear_text, landing_text, compute_took_txt
 
 @app.callback(
+    Input("court-graph", "relayoutData")
+)
+def update_camera(relayout):
+    if relayout and "scene.camera" in relayout:
+        camera = relayout["scene.camera"]
+
+@app.callback(
+    Output("launch-section", "style"),
+    Input("toggle-launch", "n_clicks"),
+    State("launch-section", "style"),
+)
+def toggle_launch(n, style):
+    if n % 2 == 1:
+        return {**style, "display": "block"}
+    return {**style, "display": "none"}
+
+@app.callback(
+    Output("toggle-launch", "children"),
+    Input("toggle-launch", "n_clicks"),
+)
+def rotate_arrow(n):
+    return "▼ Launch parameters" if n % 2 else "▶ Launch parameters"
+
+@app.callback(
     Output("speed", "value"),
     Output("height", "value"),
     Output("elevation", "value"),
@@ -334,7 +456,6 @@ def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_
     Input("preset-dropdown", "value"),
     prevent_initial_call=True
 )
-
 def load_preset(preset_key):
 
     if preset_key is None:
@@ -342,7 +463,6 @@ def load_preset(preset_key):
 
     p = SHOT_PRESETS[preset_key]
 
-    print(p)
     return (
         p["launch_speed_kmh"],
         p["launch_height_m"]*100,
@@ -354,6 +474,42 @@ def load_preset(preset_key):
         p['depth_m'],
         p["center_shift_m"]
     )
-# ---------------- run ----------------
+
+from dash import callback_context
+from dash import Patch
+
+@app.callback(
+    Output("court-graph", "figure", allow_duplicate=True),
+    Input("zoom-in", "n_clicks"),
+    Input("zoom-out", "n_clicks"),
+    Input("reset-camera", "n_clicks"),
+    State("court-graph", "figure"),
+    prevent_initial_call=True
+)
+def zoom_camera(zin, zout, reset, fig):
+    ctx = callback_context
+    trigger = ctx.triggered[0]["prop_id"].split(".")[0]
+
+    # Default camera
+    default_eye = {"x": 1.5, "y": -2.0, "z": 1.2}
+
+    camera = fig.get("layout", {}).get("scene", {}).get("camera", {})
+    eye = camera.get("eye", default_eye)
+
+    if trigger == "zoom-in":
+        scale = 0.85
+        new_eye = {k: v * scale for k, v in eye.items()}
+
+    elif trigger == "zoom-out":
+        scale = 1.15
+        new_eye = {k: v * scale for k, v in eye.items()}
+
+    elif trigger == "reset-camera":
+        new_eye = default_eye
+
+    patch = Patch()
+    patch["layout"]["scene"]["camera"]["eye"] = new_eye
+    return patch
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8050)

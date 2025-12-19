@@ -1,0 +1,19 @@
+button {
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+button:active {
+  background: #333;
+}
+
+#drawer {
+  touch-action: none;
+}
+
+#graph-area {
+  touch-action: auto;
+}
