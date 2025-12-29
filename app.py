@@ -3,7 +3,7 @@ from dash import Dash, dcc, html, Input, Output, State
 import numpy as np
 from shots import SHOT_PRESETS, preset_options
 
-from physics import simulate
+from physics import simulate, COURTS
 
 import time
 
@@ -87,13 +87,15 @@ def compute_landing_depth(x, z):
     depth = court_length - landing_x
     return float(depth), float(landing_x)
 
-def plot_court_fig(X, Y, Z, camera):
+def plot_court_fig(X, Y, Z, speed, T, camera, court_type):
+
+    court_color = COURTS[court_type]["color"]
     mesh = go.Mesh3d(
         x=[0, court_length, court_length, 0],
         y=[-halfW, -halfW, halfW, halfW],
         z=[0, 0, 0, 0],
-        color="black",
-        opacity=0.0,    # fully transparent floor
+        color=court_color,
+        opacity=1.0,    # fully transparent floor
         showscale=False
     )
 
@@ -124,11 +126,18 @@ def plot_court_fig(X, Y, Z, camera):
     net_cords, net_tape = make_realistic_net()
     lines.append(net_cords)
     lines.append(net_tape)
-
     # Ball path
     trail = go.Scatter3d(
         x=X, y=Y, z=Z,
-        mode="lines", line=dict(color="yellow", width=6)
+        mode="lines", line=dict(color="yellow", width=6), 
+        customdata=np.column_stack([T, speed*3.6]),
+
+        hovertemplate=(
+            "<b>Shot</b><br>"
+            "Time: %{customdata[0]:.2f} s<br>"
+            "Speed: %{customdata[1]:.1f} km/h<br>"
+            "<extra></extra>"
+        ),
     )
 
     ball = go.Scatter3d(
@@ -309,6 +318,35 @@ app.layout = html.Div(
                 html.Div(
                     style={"padding": "12px", "borderBottom": "1px solid #222"},
                     children=[
+                        html.Label("Court type"),
+                        dcc.Dropdown(
+                            id="court-type",
+                            options=[
+                                {"label": v["label"], "value": k}
+                                for k, v in COURTS.items()
+                            ],
+                            className="dark-dropdown", 
+                            value="hard",
+                            searchable=False,
+                            clearable=False,
+                        ),
+
+                        # Description text
+                        html.Div(
+                            id="court-desc",
+                            style={
+                                "marginTop": "6px",
+                                "fontSize": "13px",
+                                "color": "#aaa",
+                                "lineHeight": "1.3",
+                            },
+                        ),
+                    ],
+                ),
+
+                html.Div(
+                    style={"padding": "12px", "borderBottom": "1px solid #222"},
+                    children=[
                         html.Label("Shot preset"),
                         dcc.Dropdown(
                             id="preset-dropdown",
@@ -375,17 +413,23 @@ app.layout = html.Div(
     Input("spin_azim_deg", "value"),
     Input("impact_x", "value"),
     Input("impact_y", "value"),
+    Input("court-type", "value"),
     State("prev-shot", "data"),
 )
-def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y, prev_shot):
+def update(speed, height, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y, court_type, prev_shot):
     
     time0 = time.time()
 
     cc = 1000/3600 
-    traj = simulate(height/100, speed * cc, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y)
+    traj, v_traj, T = simulate(height/100, speed * cc, elevation, azimuth, spin, spin_lat, spin_azim, impact_x, impact_y, court_type)
     X, Y, Z = traj[:,0], traj[:,1], traj[:,2]
+    speed = np.linalg.norm(v_traj, axis=1)
+    print(X.shape)
+    print(speed.shape)
+    print(T.shape)
+    assert len(X) == len(speed) == len(T)
 
-    fig =  plot_court_fig(X, Y, Z, camera)
+    fig =  plot_court_fig(X, Y, Z, speed, T, camera, court_type)
     # Draw previous shot if exists
     if prev_shot:
         fig.add_trace(go.Scatter3d(
@@ -510,6 +554,21 @@ def zoom_camera(zin, zout, reset, fig):
     patch = Patch()
     patch["layout"]["scene"]["camera"]["eye"] = new_eye
     return patch
+
+@app.callback(
+    Output("court-desc", "children"),
+    Output("court-desc", "style"),
+    Input("court-type", "value"),
+)
+def update_desc(court):
+    return (
+        COURTS[court]["desc"],
+        {
+            "color": COURTS[court]["color"],
+            "fontSize": "13px",
+            "marginTop": "6px",
+        },
+    )
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8050)
