@@ -140,8 +140,15 @@ def simulate(h0, v0, elev_deg, azim_deg, spin_rpm, spin_lat_rpm, spin_azim_deg, 
 
             Jt = np.array([0.0, 0.0, 0.0])
             if vct_mag > 1e-6:
-                # sliding friction impulse at Coulomb limit
-                Jt_xy = -mu * Jn * (vct / vct_mag)   # 2D
+                # Rolling check: impulse needed to kill slip for a solid sphere
+                # effective mass coefficient = I/(I + mR²) = (2/5)/(7/5) = 2/7
+                Jt_rolling_mag = (2.0 / 7.0) * m * vct_mag
+                if Jt_rolling_mag <= mu * Jn:
+                    # rolling contact – just enough impulse to kill slip
+                    Jt_xy = -(2.0 / 7.0) * m * vct
+                else:
+                    # sliding – full Coulomb friction limit
+                    Jt_xy = -mu * Jn * (vct / vct_mag)
                 Jt = np.array([Jt_xy[0], Jt_xy[1], 0.0])
 
             # ---- update linear velocity ----
